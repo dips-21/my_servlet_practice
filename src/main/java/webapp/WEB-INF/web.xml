@@ -1,0 +1,63 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Person Servlet Example</display-name>
+    <servlet>
+        <servlet-name>PersonServlet</servlet-name>
+        <display-name>PersonServlet</display-name>
+        <description>Test GET, POST methods of Servlet</description>
+        <servlet-class>dips.PersonServlet</servlet-class>
+        <!--Un-comment  below line if you want to instantiate and initialize the servlet during the servlet-container(tomcat) startup-->
+        <!-- <load-on-startup>1</load-on-startup> -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PersonServlet</servlet-name>
+        <url-pattern>/Person</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonListServlet</servlet-name>
+        <display-name>PersonListServlet</display-name>
+        <description>Test GET, POST methods of Servlet</description>
+        <servlet-class>dips.PersonListServlet</servlet-class>
+        <!--Un-comment  below line if you want to instantiate and initialize the servlet during the servlet-container(tomcat) startup-->
+        <!-- <load-on-startup>1</load-on-startup> -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PersonListServlet</servlet-name>
+        <url-pattern>/personList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <display-name>LoginServlet</display-name>
+        <description>Test GET, POST methods of Servlet</description>
+        <servlet-class>dips.LoginServlet</servlet-class>
+        <!--Un-comment  below line if you want to instantiate and initialize the servlet during the servlet-container(tomcat) startup-->
+        <!-- <load-on-startup>1</load-on-startup> -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <display-name>LoginFilter</display-name>
+        <description>Test GET, POST methods of Servlet</description>
+        <filter-class>-class>dips.LoginFilter</filter-class>
+        <!--Un-comment  below line if you want to instantiate and initialize the servlet during the servlet-container(tomcat) startup-->
+        <!-- <load-on-startup>1</load-on-startup> -->
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+</web-app>
