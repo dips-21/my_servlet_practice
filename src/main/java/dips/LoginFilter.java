@@ -23,10 +23,10 @@ public class LoginFilter implements Filter {
         if (isLoggedIn != null && !isLoggedIn) {
             System.out.println("login failed");
           HttpServletResponse httpServletResponse=  (HttpServletResponse)response;
-          httpServletResponse.sendRedirect("/Login.html");
-            return;
+          httpServletResponse.sendRedirect(((HttpServletRequest) request).getContextPath()+"/Login.html");
+        }else {
+            chain.doFilter(request, response);
         }
-        chain.doFilter(request,response);
     }
 
     @Override

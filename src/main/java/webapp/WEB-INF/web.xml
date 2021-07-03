@@ -51,13 +51,13 @@
         <filter-name>LoginFilter</filter-name>
         <display-name>LoginFilter</display-name>
         <description>Test GET, POST methods of Servlet</description>
-        <filter-class>-class>dips.LoginFilter</filter-class>
+        <filter-class>dips.LoginFilter</filter-class>
         <!--Un-comment  below line if you want to instantiate and initialize the servlet during the servlet-container(tomcat) startup-->
         <!-- <load-on-startup>1</load-on-startup> -->
     </filter>
 
     <filter-mapping>
         <filter-name>LoginFilter</filter-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/Person</url-pattern>
     </filter-mapping>
 </web-app>
